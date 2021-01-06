@@ -6,13 +6,17 @@ const platform = 'battle'
 const baseURL = 'https://app.sbmmwarzone.com/'
 
 const get = async (url) => {
-    let res = await fetch(url)
+    try {
+        let res = await fetch(url)
 
-    let jsonString = await res.text()
+        let jsonString = await res.text()
 
-    let json = await JSON.parse(jsonString)
+        let json = await JSON.parse(jsonString)
 
-    return json
+        return json
+    } catch (e) {
+        console.log(e)
+    }
 }
 
 const getPlayer = async () => {
@@ -36,32 +40,43 @@ const getMatch = async (matchId) => {
 const getAverageKdOfGame = async (match) => {
     let kdSum = 0
 
-    await match.data.players.forEach(
-        (player) =>
-            (kdSum += player.playerStat.lifetime.mode.br.properties.kdRatio)
-    )
+    try {
+        await match.data.players.forEach(
+            (player) =>
+                (kdSum += player.playerStat.lifetime.mode.br.properties.kdRatio)
+        )
+    } catch (e) {
+        console.log(e)
+    }
 
-    let averageKd = kdSum / match.data.players.length
-
-    return averageKd
+    return kdSum / match.data.players.length
 }
 
 const getLifetimeMatchKdAverage = async () => {
     let matches = await getMatches()
 
+    let error = false
+
     let kdSum = 0
 
-    for (let { id } of matches) {
-        let kd = await getAverageKdOfGame(await getMatch(id))
-        console.log(kd)
-        kdSum += kd
+    try {
+        for (let { id } of matches) {
+            kdSum += await getAverageKdOfGame(await getMatch(id))
+        }
+    } catch (e) {
+        console.log(e)
+        error = true
     }
 
-    let averageLifetimeKd = kdSum / matches.length
-
-    console.log(averageLifetimeKd)
+    return error ? null : kdSum / matches.length
 }
 
-const doStuff = async () => await getLifetimeMatchKdAverage()
+const doStuff = async () => {
+    let res = null
+    while (res == null) {
+        res = await getLifetimeMatchKdAverage()
+    }
+    console.log(res)
+}
 
 doStuff()
