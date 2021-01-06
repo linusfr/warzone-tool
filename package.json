@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "fastify": "^3.9.2",
     "node-fetch": "^2.6.1"
   }
 }

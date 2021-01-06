@@ -16,7 +16,7 @@ const get = async (url) => {
 
         return json
     } catch (e) {
-        // console.log(e)
+        console.log(e)
     }
 }
 
@@ -47,7 +47,7 @@ const getAverageKdOfGame = async (match) => {
                 (kdSum += player.playerStat.lifetime.mode.br.properties.kdRatio)
         )
     } catch (e) {
-        // console.log(e)
+        console.log(e)
     }
 
     return kdSum / match.data.players.length
@@ -66,48 +66,24 @@ const getLifetimeMatchKdAverage = async (username, usernumber) => {
             kdSum += await getAverageKdOfGame(await getMatch(id))
         }
     } catch (e) {
-        // console.log(e)
+        console.log(e)
         error = true
     }
 
     while (error) {
         error = false
-        errorCount++
 
         await getLifetimeMatchKdAverage(username, usernumber)
-
-        if (errorCount == 10) return null
     }
 
     return kdSum / matches.length
 }
 
-const fastify = require('fastify')({
-    logger: true,
-})
+const run = async () => {
+    let username = 'csprle'
+    let usernumber = '2213'
 
-fastify.get('/averageMatchKd', async function (request, reply) {
-    let username = request.query.username
-    let usernumber = request.query.usernumber
-    try {
-        let result = await getLifetimeMatchKdAverage(username, usernumber)
+    console.log(await getLifetimeMatchKdAverage(username, usernumber))
+}
 
-        if (result == null) {
-            return 'you did something wrong. Hans, is that you?'
-        } else {
-            return result
-        }
-    } catch (e) {
-        // console.log(e)
-        return 'you did something wrong. Hans, is that you?'
-    }
-})
-
-// Run the server!
-fastify.listen(process.env.PORT || 3000, '0.0.0.0', function (err, address) {
-    if (err) {
-        fastify.log.error(err)
-        process.exit(1)
-    }
-    fastify.log.info(`server listening on ${address}`)
-})
+run()
