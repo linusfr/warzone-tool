@@ -14,7 +14,7 @@ COPY package*.json ./
 RUN npm install --silent
 
 # add app
-COPY app.js .
+COPY app.js ./
 
 # start app
 CMD ["node", "app.js"]
