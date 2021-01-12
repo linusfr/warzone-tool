@@ -1,0 +1,382 @@
+[
+    {
+        "refreshAt": 1610459284,
+        "id": "15383883173427021778",
+        "mode": "br_brtrios",
+        "kills": 1,
+        "damage": 350,
+        "position": 37,
+        "username": "Der Kavalier",
+        "startedAt": 1610318546,
+        "matchStatData": {
+            "mode": "br_brtrios",
+            "player10": 1.8823409461663947,
+            "teamMedian": 1.2159927917434055,
+            "playerCount": 151,
+            "teamAverage": 1.273403888403046,
+            "playerMedian": 1.2092216162617748,
+            "playerAverage": 1.2720551045813535
+        }
+    },
+    {
+        "refreshAt": 1610459284,
+        "id": "1736588399305084703",
+        "mode": "br_brtrios",
+        "kills": 0,
+        "damage": 555,
+        "position": 37,
+        "username": "Der Kavalier",
+        "startedAt": 1610318048,
+        "matchStatData": {
+            "mode": "br_brtrios",
+            "player10": 1.7587530473714676,
+            "teamMedian": 1.1207368868696783,
+            "playerCount": 149,
+            "teamAverage": 1.1816162819262603,
+            "playerMedian": 1.0712361568392696,
+            "playerAverage": 1.1750224807301206
+        }
+    },
+    {
+        "refreshAt": 1610459284,
+        "id": "16958210681912497689",
+        "mode": "br_brtrios",
+        "kills": 0,
+        "damage": 82,
+        "position": 39,
+        "username": "Der Kavalier",
+        "startedAt": 1610317543,
+        "matchStatData": {
+            "mode": "br_brtrios",
+            "player10": 1.5849588229014853,
+            "teamMedian": 1.0629420432947625,
+            "playerCount": 147,
+            "teamAverage": 1.0979523899657282,
+            "playerMedian": 1.016182048040455,
+            "playerAverage": 1.097952389965728
+        }
+    },
+    {
+        "refreshAt": 1610459284,
+        "id": "7879221938399606252",
+        "mode": "br_brduos",
+        "kills": 3,
+        "damage": 1553,
+        "position": 32,
+        "username": "Der Kavalier",
+        "startedAt": 1610316586,
+        "matchStatData": {
+            "mode": "br_brduos",
+            "player10": 1.2575059531099044,
+            "teamMedian": 0.8869976159126041,
+            "playerCount": 149,
+            "teamAverage": 0.9125039419033426,
+            "playerMedian": 0.8856447688564477,
+            "playerAverage": 0.9113037883635071
+        }
+    },
+    {
+        "refreshAt": 1610459284,
+        "id": "1814001245438724828",
+        "mode": "br_brduos",
+        "kills": 6,
+        "damage": 2319,
+        "position": 4,
+        "username": "Der Kavalier",
+        "startedAt": 1610314859,
+        "matchStatData": {
+            "mode": "br_brduos",
+            "player10": 1.2800925925925926,
+            "teamMedian": 0.9074261260120224,
+            "playerCount": 151,
+            "teamAverage": 0.8979963811463857,
+            "playerMedian": 0.8921955663528697,
+            "playerAverage": 0.9061502243841568
+        }
+    },
+    {
+        "refreshAt": 1610459284,
+        "id": "2317490045907065103",
+        "mode": "br_brtrios",
+        "kills": 1,
+        "damage": 616,
+        "position": 24,
+        "username": "Der Kavalier",
+        "startedAt": 1610312426,
+        "matchStatData": {
+            "mode": "br_brtrios",
+            "player10": 1.6798190605720495,
+            "teamMedian": 1.0249314308470285,
+            "playerCount": 149,
+            "teamAverage": 1.059392888766633,
+            "playerMedian": 0.9948375994837599,
+            "playerAverage": 1.059867743115934
+        }
+    },
+    {
+        "refreshAt": 1610459284,
+        "id": "17433923356384113482",
+        "mode": "br_brtrios",
+        "kills": 3,
+        "damage": 1533,
+        "position": 31,
+        "username": "Der Kavalier",
+        "startedAt": 1610311630,
+        "matchStatData": {
+            "mode": "br_brtrios",
+            "player10": 1.434489988061382,
+            "teamMedian": 0.9658349892748258,
+            "playerCount": 148,
+            "teamAverage": 0.9854110657739786,
+            "playerMedian": 0.931474688187821,
+            "playerAverage": 0.9953268976863378
+        }
+    },
+    {
+        "refreshAt": 1610459284,
+        "id": "7507706972916107597",
+        "mode": "br_brtrios",
+        "kills": 2,
+        "damage": 848,
+        "position": 25,
+        "username": "Der Kavalier",
+        "startedAt": 1610310710,
+        "matchStatData": {
+            "mode": "br_brtrios",
+            "player10": 1.3160975609756098,
+            "teamMedian": 0.9225263098518431,
+            "playerCount": 141,
+            "teamAverage": 0.9676955455156171,
+            "playerMedian": 0.8959790209790209,
+            "playerAverage": 0.9676955455156174
+        }
+    },
+    {
+        "refreshAt": 1610459284,
+        "id": "3179888600208484783",
+        "mode": "br_rebirth_rbrthtrios",
+        "kills": 5,
+        "damage": 2211,
+        "position": 1,
+        "username": "Der Kavalier",
+        "startedAt": 1610056310,
+        "matchStatData": {
+            "mode": "br_rebirth_rbrthtrios",
+            "player10": 1.3639324268173079,
+            "teamMedian": 0.886445088307795,
+            "playerCount": 44,
+            "teamAverage": 0.8917669148755886,
+            "playerMedian": 0.8816433372174624,
+            "playerAverage": 0.8854435923191827
+        }
+    },
+    {
+        "refreshAt": 1610459284,
+        "id": "3623221857332528677",
+        "mode": "br_brquads",
+        "kills": 0,
+        "damage": 306,
+        "position": 29,
+        "username": "Der Kavalier",
+        "startedAt": 1610055681,
+        "matchStatData": {
+            "mode": "br_brquads",
+            "player10": 1.5745899051635959,
+            "teamMedian": 1.1141547886372178,
+            "playerCount": 152,
+            "teamAverage": 1.095718912061533,
+            "playerMedian": 1.0515501241621728,
+            "playerAverage": 1.0896838870052785
+        }
+    },
+    {
+        "refreshAt": 1610459284,
+        "id": "4463236721046360478",
+        "mode": "br_brquads",
+        "kills": 1,
+        "damage": 300,
+        "position": 25,
+        "username": "Der Kavalier",
+        "startedAt": 1610054986,
+        "matchStatData": {
+            "mode": "br_brquads",
+            "player10": 1.4087221095334685,
+            "teamMedian": 0.9548332098818686,
+            "playerCount": 153,
+            "teamAverage": 0.9971136915739731,
+            "playerMedian": 0.9588159588159588,
+            "playerAverage": 0.9919399898216882
+        }
+    },
+    {
+        "refreshAt": 1610459284,
+        "id": "2784104131726145282",
+        "mode": "br_brquads",
+        "kills": 0,
+        "damage": 0,
+        "position": 33,
+        "username": "Der Kavalier",
+        "startedAt": 1610054823,
+        "matchStatData": {
+            "mode": "br_brquads",
+            "player10": 1.4624434037639658,
+            "teamMedian": 0.9790189914393133,
+            "playerCount": 136,
+            "teamAverage": 0.9474059652384728,
+            "playerMedian": 0.8849438931779969,
+            "playerAverage": 0.9515132792832571
+        }
+    },
+    {
+        "refreshAt": 1610459284,
+        "id": "12007836303774737256",
+        "mode": "br_brquads",
+        "kills": 1,
+        "damage": 1590,
+        "position": 2,
+        "username": "Der Kavalier",
+        "startedAt": 1610052980,
+        "matchStatData": {
+            "mode": "br_brquads",
+            "player10": 1.9044958567743768,
+            "teamMedian": 0.9247253536871749,
+            "playerCount": 167,
+            "teamAverage": 0.9862052834006287,
+            "playerMedian": 0.9493457154917687,
+            "playerAverage": 1.0795369211541566
+        }
+    },
+    {
+        "refreshAt": 1610459284,
+        "id": "12373136695218068149",
+        "mode": "br_brquads",
+        "kills": 0,
+        "damage": 0,
+        "position": 30,
+        "username": "Der Kavalier",
+        "startedAt": 1610052760,
+        "matchStatData": {
+            "mode": "br_brquads",
+            "player10": 1.565593391743628,
+            "teamMedian": 1.0294381086631295,
+            "playerCount": 170,
+            "teamAverage": 0.9842765870285498,
+            "playerMedian": 1.0251828397064877,
+            "playerAverage": 1.056924163953457
+        }
+    },
+    {
+        "refreshAt": 1610459284,
+        "id": "12937822853405821434",
+        "mode": "br_rebirth_rbrthtrios",
+        "kills": 0,
+        "damage": 106,
+        "position": 13,
+        "username": "Der Kavalier",
+        "startedAt": 1610052478,
+        "matchStatData": {
+            "mode": "br_rebirth_rbrthtrios",
+            "player10": 1.3096923788079864,
+            "teamMedian": 0.9465820962125948,
+            "playerCount": 45,
+            "teamAverage": 0.9779863117586653,
+            "playerMedian": 0.9615384615384616,
+            "playerAverage": 0.985445428648936
+        }
+    },
+    {
+        "refreshAt": 1610459284,
+        "id": "14259655264390820023",
+        "mode": "br_mini_rebirth_mini_royale_duos",
+        "kills": 0,
+        "damage": 208,
+        "position": 20,
+        "username": "Der Kavalier",
+        "startedAt": 1610051501,
+        "matchStatData": {
+            "mode": "br_mini_rebirth_mini_royale_duos",
+            "player10": 1.7311170554771256,
+            "teamMedian": 1.082775145321657,
+            "playerCount": 40,
+            "teamAverage": 1.1208477564469432,
+            "playerMedian": 1.0708808618504437,
+            "playerAverage": 1.1232263185012124
+        }
+    },
+    {
+        "refreshAt": 1610459284,
+        "id": "14586381245303432881",
+        "mode": "br_mini_rebirth_mini_royale_duos",
+        "kills": 0,
+        "damage": 35,
+        "position": 9,
+        "username": "Der Kavalier",
+        "startedAt": 1610051076,
+        "matchStatData": {
+            "mode": "br_mini_rebirth_mini_royale_duos",
+            "player10": 1.982952976510835,
+            "teamMedian": 1.3257663352897557,
+            "playerCount": 40,
+            "teamAverage": 1.256810056403226,
+            "playerMedian": 1.2121724429416738,
+            "playerAverage": 1.2390599976194694
+        }
+    },
+    {
+        "refreshAt": 1610459284,
+        "id": "7290622744819989646",
+        "mode": "br_rebirth_rbrthtrios",
+        "kills": 0,
+        "damage": 303,
+        "position": 12,
+        "username": "Der Kavalier",
+        "startedAt": 1610050705,
+        "matchStatData": {
+            "mode": "br_rebirth_rbrthtrios",
+            "player10": 1.7132582803992742,
+            "teamMedian": 1.0369474067378943,
+            "playerCount": 45,
+            "teamAverage": 1.1194615895519584,
+            "playerMedian": 1.0851612903225807,
+            "playerAverage": 1.145612449718764
+        }
+    },
+    {
+        "refreshAt": 1610459284,
+        "id": "11127752970825208658",
+        "mode": "br_rebirth_rbrthtrios",
+        "kills": 0,
+        "damage": 168,
+        "position": 15,
+        "username": "Der Kavalier",
+        "startedAt": 1610050489,
+        "matchStatData": {
+            "mode": "br_rebirth_rbrthtrios",
+            "player10": 1.350622604254494,
+            "teamMedian": 1.0676608536279109,
+            "playerCount": 45,
+            "teamAverage": 1.023519004663018,
+            "playerMedian": 1.0690811535881959,
+            "playerAverage": 1.0284027023927398
+        }
+    },
+    {
+        "refreshAt": 1610459284,
+        "id": "9743551699590994995",
+        "mode": "br_rebirth_rbrthtrios",
+        "kills": 3,
+        "damage": 977,
+        "position": 15,
+        "username": "Der Kavalier",
+        "startedAt": 1610050227,
+        "matchStatData": {
+            "mode": "br_rebirth_rbrthtrios",
+            "player10": 1.5213749331431627,
+            "teamMedian": 1.0547150787159256,
+            "playerCount": 45,
+            "teamAverage": 1.1366255457084642,
+            "playerMedian": 1.0320512820512822,
+            "playerAverage": 1.1133773000795482
+        }
+    }
+]

@@ -1,0 +1,35 @@
+--------------------------------------------------
+Player 
+Csprle#2213
+--------------------------------------------------
+{
+  "cash": 0,
+  "wins": 7,
+  "kills": 957,
+  "score": 1630455,
+  "deaths": 1388,
+  "topTen": 135,
+  "kdRatio": 0.6894812680115274,
+  "revives": 201,
+  "topFive": 71,
+  "contracts": 875,
+  "timePlayed": 583938,
+  "gamesPlayed": 601,
+  "topTwentyFive": 328,
+  "scorePerMinute": 167.53028574951452
+}
+--------------------------------------------------
+KD Average of all Players over all Matches Played 
+1.1800592178558151
+--------------------------------------------------
+Match Rank Average of over all Matches Played 
+Rank: Diamond 3 
+Lowest Possible KD in the Rank: 1.18
+--------------------------------------------------
+Amount of Games played 
+20
+--------------------------------------------------
+Diamond Lobbies: 13
+Gold Lobbies: 5
+Silver Lobbies: 1
+Bronze Lobbies: 1

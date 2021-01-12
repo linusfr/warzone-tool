@@ -134,17 +134,38 @@ const getLifetimeLobbyRanks = async (username, usernumber) => {
     }
 }
 
-const run = async () => {
+const spacer = `\n--------------------------------------------------\n`
+
+const ranks = [
+    { Name: 'Diamond 1', KD: 1.234 },
+    { Name: 'Diamond 2', KD: 1.204 },
+    { Name: 'Diamond 3', KD: 1.18 },
+    { Name: 'Diamond 4', KD: 1.159 },
+    { Name: 'Diamond 5', KD: 1.139 },
+    { Name: 'Gold 1', KD: 1.118 },
+    { Name: 'Gold 2', KD: 1.098 },
+    { Name: 'Gold 3', KD: 1.077 },
+    { Name: 'Gold 4', KD: 1.056 },
+    { Name: 'Gold 5', KD: 1.036 },
+    { Name: 'Silver 1', KD: 1.015 },
+    { Name: 'Silver 2', KD: 0.99 },
+    { Name: 'Silver 3', KD: 0.967 },
+    { Name: 'Silver 4', KD: 0.941 },
+    { Name: 'Silver 5', KD: 0.913 },
+    { Name: 'Bronze 1', KD: 0.979 },
+    { Name: 'Bronze 2', KD: 0.839 },
+    { Name: 'Bronze 3', KD: 0.79 },
+    { Name: 'Bronze 4', KD: 0.592 },
+    { Name: 'Bronze 5', KD: 0 },
+]
+
+const reversedRanks = ranks.sort().reverse()
+
+const getInfo = async ({ username, usernumber }) => {
     let error = false
 
-    // let username = 'HansanoMilch'
-    // let usernumber = '2418'
-    // let username = 'Csprle'
-    // let usernumber = '2213'
-    let username = 'DerKavalier'
-    let usernumber = '21507'
-
     try {
+        let player = await getPlayer(username, usernumber)
         let lifetimeKD = await getLifetimeMatchKdAverage(username, usernumber)
         let { Name, KD } = await getLifeTimeAverageGameRank(lifetimeKD)
         let lifeTimeMatchRanks = await getLifetimeLobbyRanks(
@@ -153,8 +174,13 @@ const run = async () => {
         )
         let gamesPlayed = lifeTimeMatchRanks.length
 
-        let output =
-            `${spacer}Player \n${username}#${usernumber}` +
+        let playerProperties = player.data.lifetime.mode.br.properties
+
+        let output = `${spacer}Player \n${username}#${usernumber}`
+
+        output += `${spacer}` + JSON.stringify(playerProperties, null, 2)
+
+        output +=
             `${spacer}KD Average of all Players over all Matches Played \n${lifetimeKD}` +
             `${spacer}Match Rank Average of over all Matches Played \nRank: ${Name} \nLowest Possible KD in the Rank: ${KD}` +
             `${spacer}Amount of Games played \n${gamesPlayed}`
@@ -190,35 +216,23 @@ const run = async () => {
     }
 
     if (error) {
-        run()
+        getInfo(username, usernumber)
     }
 }
 
-const spacer = `\n--------------------------------------------------\n`
+const run = async () => {
+    // let user = { username: 'HansanoMilch', usernumber: '2418' }
+    // let user = { username: 'Csprle', usernumber: '2213' }
+    let user = { username: 'DerKavalier', usernumber: '21507' }
 
-const ranks = [
-    { Name: 'Diamond 1', KD: 1.234 },
-    { Name: 'Diamond 2', KD: 1.204 },
-    { Name: 'Diamond 3', KD: 1.18 },
-    { Name: 'Diamond 4', KD: 1.159 },
-    { Name: 'Diamond 5', KD: 1.139 },
-    { Name: 'Gold 1', KD: 1.118 },
-    { Name: 'Gold 2', KD: 1.098 },
-    { Name: 'Gold 3', KD: 1.077 },
-    { Name: 'Gold 4', KD: 1.056 },
-    { Name: 'Gold 5', KD: 1.036 },
-    { Name: 'Silver 1', KD: 1.015 },
-    { Name: 'Silver 2', KD: 0.99 },
-    { Name: 'Silver 3', KD: 0.967 },
-    { Name: 'Silver 4', KD: 0.941 },
-    { Name: 'Silver 5', KD: 0.913 },
-    { Name: 'Bronze 1', KD: 0.979 },
-    { Name: 'Bronze 2', KD: 0.839 },
-    { Name: 'Bronze 3', KD: 0.79 },
-    { Name: 'Bronze 4', KD: 0.592 },
-    { Name: 'Bronze 5', KD: 0 },
-]
+    // let player = await getPlayer(user.username, user.usernumber)
+    // let matches = await getMatches(user.username, user.usernumber)
+    // let match = await getMatch(matches[0].id)
 
-const reversedRanks = ranks.sort().reverse()
+    // let output = match
+    // console.log(JSON.stringify(output, null, 2))
+
+    getInfo(user)
+}
 
 run()

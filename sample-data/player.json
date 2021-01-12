@@ -1,0 +1,91 @@
+{
+    "uno": "62ca48d7-3b02-4c43-afbb-c4b002",
+    "data": {
+        "uno": "DerKavalier#21507",
+        "level": 23,
+        "weekly": {
+            "mode": {
+                "br_brduos": {
+                    "properties": {
+                        "kills": 12,
+                        "score": 22650,
+                        "deaths": 15,
+                        "assists": 4,
+                        "kdRatio": 0.8,
+                        "headshots": 1,
+                        "damageDone": 4894,
+                        "gulagKills": 3,
+                        "damageTaken": 3916,
+                        "gulagDeaths": 6,
+                        "killsPerGame": 2,
+                        "matchesPlayed": 6,
+                        "scorePerMinute": 85.7629685725104
+                    }
+                },
+                "br_brquads": {
+                    "properties": {
+                        "kills": 3,
+                        "score": 21550,
+                        "deaths": 7,
+                        "assists": 3,
+                        "kdRatio": 0.42857142857142855,
+                        "headshots": 1,
+                        "damageDone": 2844,
+                        "gulagKills": 1,
+                        "damageTaken": 2366,
+                        "gulagDeaths": 2,
+                        "killsPerGame": 0.5,
+                        "matchesPlayed": 6,
+                        "scorePerMinute": 88.4404924760602
+                    }
+                },
+                "br_brtrios": {
+                    "properties": {
+                        "kills": 12,
+                        "score": 17250,
+                        "deaths": 23,
+                        "assists": 4,
+                        "kdRatio": 0.5217391304347826,
+                        "headshots": 2,
+                        "damageDone": 6361,
+                        "gulagKills": 4,
+                        "damageTaken": 5071,
+                        "gulagDeaths": 8,
+                        "killsPerGame": 0.9230769230769231,
+                        "matchesPlayed": 13,
+                        "scorePerMinute": 35.89138953427888
+                    }
+                }
+            }
+        },
+        "lifetime": {
+            "mode": {
+                "br": {
+                    "properties": {
+                        "cash": 0,
+                        "wins": 37,
+                        "kills": 2704,
+                        "score": 4048605,
+                        "deaths": 3969,
+                        "topTen": 381,
+                        "kdRatio": 0.6812799193751574,
+                        "revives": 354,
+                        "topFive": 207,
+                        "contracts": 2407,
+                        "timePlayed": 1482508,
+                        "gamesPlayed": 1632,
+                        "topTwentyFive": 840,
+                        "scorePerMinute": 163.85496739309332
+                    }
+                }
+            }
+        }
+    },
+    "activisionId": null,
+    "xblId": null,
+    "psnId": null,
+    "battleNetId": "DerKavalier#21507",
+    "createdAt": "2021-01-07T20:14:00.673Z",
+    "updatedAt": "2021-01-12T13:34:19.154Z",
+    "refreshAt": 1610460259
+}
