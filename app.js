@@ -1,33 +1,17 @@
 'use strict'
 
-const fetch = require('node-fetch')
-
 const platform = 'battle'
 
-const baseURL = 'https://app.sbmmwarzone.com/'
+const baseURL = 'https://app.wzstats.gg/v2/'
 
-const get = async (url) => {
-    let error = false
+import { spacer, ranks, reversedRanks } from './src/ranks.js'
 
-    let json
-
-    try {
-        let res = await fetch(url)
-        let jsonString = await res.text()
-        json = await JSON.parse(jsonString)
-    } catch (e) {
-        console.log(e)
-        error = true
-    }
-
-    if (error) {
-        get(url)
-    } else {
-        return json
-    }
-}
+import { get } from './src/http.js'
 
 const getPlayer = async (username, usernumber) => {
+    console.log(
+        `${baseURL}player?username=${username}%23${usernumber}&platform=${platform}`
+    )
     return await get(
         `${baseURL}player?username=${username}%23${usernumber}&platform=${platform}`
     )
@@ -48,16 +32,17 @@ const getMatch = async (matchId) => {
 const getAverageKdOfGame = async (match) => {
     let kdSum = 0
 
-    try {
-        await match.data.players.forEach(
-            (player) =>
-                (kdSum += player.playerStat.lifetime.mode.br.properties.kdRatio)
-        )
-    } catch (e) {
-        console.log(e)
-    }
+    let dividend = match.data.players.length
 
-    return kdSum / match.data.players.length
+    await match.data.players.forEach((player) => {
+        try {
+            kdSum += player.playerStat.lifetime.mode.br.properties.kdRatio
+        } catch (e) {
+            dividend -= 1
+        }
+    })
+
+    return kdSum / dividend
 }
 
 const getLifetimeMatchKdAverage = async (username, usernumber) => {
@@ -134,38 +119,12 @@ const getLifetimeLobbyRanks = async (username, usernumber) => {
     }
 }
 
-const spacer = `\n--------------------------------------------------\n`
-
-const ranks = [
-    { Name: 'Diamond 1', KD: 1.234 },
-    { Name: 'Diamond 2', KD: 1.204 },
-    { Name: 'Diamond 3', KD: 1.18 },
-    { Name: 'Diamond 4', KD: 1.159 },
-    { Name: 'Diamond 5', KD: 1.139 },
-    { Name: 'Gold 1', KD: 1.118 },
-    { Name: 'Gold 2', KD: 1.098 },
-    { Name: 'Gold 3', KD: 1.077 },
-    { Name: 'Gold 4', KD: 1.056 },
-    { Name: 'Gold 5', KD: 1.036 },
-    { Name: 'Silver 1', KD: 1.015 },
-    { Name: 'Silver 2', KD: 0.99 },
-    { Name: 'Silver 3', KD: 0.967 },
-    { Name: 'Silver 4', KD: 0.941 },
-    { Name: 'Silver 5', KD: 0.913 },
-    { Name: 'Bronze 1', KD: 0.979 },
-    { Name: 'Bronze 2', KD: 0.839 },
-    { Name: 'Bronze 3', KD: 0.79 },
-    { Name: 'Bronze 4', KD: 0.592 },
-    { Name: 'Bronze 5', KD: 0 },
-]
-
-const reversedRanks = ranks.sort().reverse()
-
 const getInfo = async ({ username, usernumber }) => {
     let error = false
 
     try {
         let player = await getPlayer(username, usernumber)
+
         let lifetimeKD = await getLifetimeMatchKdAverage(username, usernumber)
         let { Name, KD } = await getLifeTimeAverageGameRank(lifetimeKD)
         let lifeTimeMatchRanks = await getLifetimeLobbyRanks(
@@ -213,6 +172,7 @@ const getInfo = async ({ username, usernumber }) => {
         console.log(output)
     } catch (e) {
         error = true
+        console.log(e)
     }
 
     if (error) {
